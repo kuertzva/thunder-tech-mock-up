@@ -1,0 +1,76 @@
+{
+	"ratio-image": {
+		"prefix": "ratio-image",
+		"body": [
+			"<div class=\"aspect-ratio-square relative\">",
+			"  <img src=\"./assets/1920x1920.png\" alt=\"{{ tt.utils.lipsum(15) }}\" class=\"w-100% h-100%\">",
+			"</div>"
+		],
+		"description": "An image with a fixed aspect ratio."
+	},
+	"card-responsive": {
+		"prefix": "card-responsive",
+		"body": [
+			"<div class=\"w-100% h-100% flex flex-wrap\">",
+			"  <div class=\"w-50% 640:w-100% 800:w-50%\">",
+			"    <!-- @instructions This is the card media area. Usually a ratio-image snippet is placed here. -->",
+			"  </div>",
+			"  <div class=\"p-16 w-50% 640:w-100% 640:p-0 800:w-50% 800:p-16\">",
+			"    <h5 class=\"h5\">{{ tt.utils.lipsum(15) }}</h5>",
+			"    <a href=\"#\">{{ tt.utils.lipsum(15) }}</a>",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Responsive card which switches between horizontal and vertical"
+	},
+	"card-vertical": {
+		"prefix": "card-vertical",
+		"body": [
+			"<div class=\"w-100% h-100%\">",
+			"  <div>",
+			"    <!-- @instructions This is the card media area. Usually a ratio-image snippet is placed here. -->",
+			"  </div>",
+			"  <div class=\"p-16\">",
+			"    <h5 class=\"h5\">{{ tt.utils.lipsum(15) }}</h5>",
+			"    <a href=\"#\">{{ tt.utils.lipsum(15) }}</a>",
+			"  </div>",
+			"</div>"
+		],
+		"description": "Vertical card"
+	},
+	"else-if": {
+		"prefix": "elif",
+		"body": [
+			"{% elif $1 %}",
+      "  $2"
+		],
+		"description": "Else-if block."
+	},
+	"else": {
+		"prefix": "else",
+		"body": [
+			"{% else $1 %}",
+      "  $2"
+		],
+		"description": "Else block"
+	},
+	"import": {
+		"prefix": "import",
+		"body": [
+      "{% import 'components/$1/$1.njk' as $1 %}",
+      "$2"
+		],
+		"description": "Import block"
+	},
+	"section": {
+		"prefix": "section",
+		"body": [
+			"<section class=\"px-sides relative bg-white\">",
+			"  <div class=\"max-w-layouts mx-auto relative\">",
+			"    ",
+			"  </div>",
+			"</section>"
+		],
+		"description": "Section with outer margins and a center margin wrap"
+	}
+}

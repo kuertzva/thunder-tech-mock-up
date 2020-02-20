@@ -1,0 +1,20 @@
+{
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    }
+  ],
+  "emmet.includeLanguages": {
+    "njk": "html",
+  },
+	"files.associations": {
+		"*.css": "postcss",
+		"*.sass": "sass"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

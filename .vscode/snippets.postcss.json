@@ -1,0 +1,29 @@
+{
+	"bp-until": {
+		"prefix": "bp-until",
+		"body": [
+			"@media (width < $1) {",
+			"  ",
+			"}"
+		],
+		"description": "Breakpoint ending at the given size, exclusive"
+	},
+	"bp-between": {
+		"prefix": "bp-between",
+		"body": [
+			"@media ($1 <= width < $2) {",
+			"  ",
+			"}"
+		],
+		"description": "Breakpoint between a range, inclusive start and exclusive end"
+  },
+  "bp-starting-at": {
+		"prefix": "bp-starting-at",
+		"body": [
+			"@media (width >= $1) {",
+			"  ",
+			"}"
+		],
+		"description": "Breakpoint starting at the given size, inclusive"
+	}
+}

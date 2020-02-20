@@ -1,0 +1,21 @@
+/*
+  This is a reusable component to include the magazine's name. As there is no reason to
+  expect the name to change, I'm not taking any input and making the output static.
+*/
+
+
+{% extends "layouts/components.njk" %}
+
+{% macro magName() %}
+  <h1 class='float-right  inline-block'>
+    <span class='text-white header-sans-class text-42 leading-none'
+    style='font-size: 12.25vw;'>
+      marketing
+    </span><br/>
+    <span class='uppercase text-LadyOrange cap-header-class text-96
+    leading-none' style='font-size: 28vw;'
+    >
+      trends
+    </span><br/>
+  </h1>
+{% endmacro %}

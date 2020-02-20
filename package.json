@@ -1,0 +1,60 @@
+{
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "browserslist": [
+    "> 2%"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@fullhuman/postcss-purgecss": "^1.3.0",
+    "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.6",
+    "basic-ftp": "^3.8.0",
+    "browser-sync": "^2.26.5",
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "decache": "^4.5.1",
+    "del": "^4.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-react": "^7.13.0",
+    "git-branch": "^2.0.1",
+    "glob": "^7.1.6",
+    "gulp": "^4.0.2",
+    "gulp-fontmin": "^0.7.4",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pretty-html": "^2.0.10",
+    "postcss-clean": "^1.1.0",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-hexrgba": "^1.0.2",
+    "postcss-nested": "^4.1.2",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.0.2",
+    "validator": "^11.0.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "yargs": "^13.3.0",
+    "tailwindcss-aspect-ratio": "^2.0.0"
+  },
+  "license": "UNLICENSED",
+  "name": "fed-starter",
+  "private": true,
+  "scripts": {
+    "build": "cross-env NODE_ENV=production gulp build --prod && yarn wp:build",
+    "dev": "gulp build && yarn wp:dev && concurrently 'yarn wp:watch' 'gulp server' --raw",
+    "static": "cross-env NODE_ENV=production gulp build --prod --static && yarn wp:build",
+    "wp:build": "webpack --mode=production",
+    "wp:dev": "webpack --mode=development",
+    "wp:watch": "webpack -w --mode=development"
+  },
+  "version": "1.0.0"
+}

@@ -1,0 +1,34 @@
+/* adding fonts */
+
+/* content font with serifs (I think it is exactly correct!) */
+@font-face {
+  font-family: 'content-serif';
+  src: url('../fonts/content-serif/Web_Fonts/museoslab_500_macroman/Museo_Slab_500_2-webfont.woff') format("woff");
+}
+/* All caps header (approximately but not exactly like the original, which I believe is a paid font) */
+@font-face {
+  font-family: 'cap-header';
+  src: url('../fonts/cap-header/web fonts/robotocondensed_bold_macroman/RobotoCondensed-Bold-webfont.woff') format("woff");
+}
+/* lower case sanserif header (approximately but not exactly like the original, which I believe is a paid font) */
+@font-face {
+  font-family: 'headerSans';
+  src: url('../fonts/lower-sans/Fonts/francophilsans-bold.woff') format("woff");
+}
+
+/*
+These are for testing that the fonts are
+successfully loading and will be/are deprecated
+*/
+
+.header-sans-class {
+  font-family: 'headerSans';
+}
+
+.content-serif-class {
+  font-family: 'content-serif';
+}
+
+.cap-header-class {
+  font-family: 'cap-header';
+}

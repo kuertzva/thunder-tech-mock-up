@@ -1,0 +1,14 @@
+image: "node:13.0.1-alpine"
+
+pipelines:
+  custom:
+    build:
+      - step:
+          name: Run Build Command
+          caches:
+            - node
+          script:
+            - yarn
+            - yarn build
+          artifacts:
+            - .build/**
