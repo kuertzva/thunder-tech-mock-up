@@ -4,6 +4,7 @@
 {# Import components #}
 {# {% from "components/example.njk" import example1, example2 %} Keeping this for reference #}
 {% from "components/title.njk" import magName %}
+{% from "components/burst.njk" import burst %}
 
 
 
@@ -20,10 +21,13 @@
 
   {# {{ example1() }} Keeping for reference
   {{ example2() }}
-  <p class="{{ textStyles.h1 }}">{{ content.headline }}</p> #}
+  <p class="{{ textStyles.h1 }}">{{ content.headline }}</p>
+  #}
 
-  <div class="container pr-4% pt-4%">
-    {{ magName("I am here") }}
+  <div class="container relative mt-tr mr-tr" id="primary-container">
+    {{ magName() }}
+    {{ burst('b1h', 'b1x', 'b1y') }}
+    {#{ burst('b1h', 'b2x', 'b2y') }#}
   </div>
 
 {% endblock %}

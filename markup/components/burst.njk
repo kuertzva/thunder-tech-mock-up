@@ -1,0 +1,20 @@
+{% extends "layouts/components.njk" %}
+
+/*
+ * This is the gray bursts in the background. Because there
+ * will be 2 of them, I'm making it resuable.
+ *
+ * The SVG file used is not the one provided but rather a copy
+ * I modified by replacing the hex value '#212B33' on line 25
+ * with '#3D4D5A'.
+ */
+
+{% macro burst(ht='0%', x='0%', y='0%') %}
+  <div
+  class='absolute z-0 h-{{ ht }} left-{{ x }} top-{{ y }}'>
+    <img
+    src='./images/Trends 2020 Graphics_Half Tone Grey.svg'
+    class='h-100%'>
+  </div>
+
+{% endmacro %}

@@ -13,7 +13,7 @@ const allColors = {
 const sizing = {
   auto: 'auto',
   ...remList([16, 24, 32, 48, 64, 128, 256, 320, 480]),
-  ...unitList('%', [20, 25, 40, 50, 60, 75, 80, 100]),
+  ...unitList('%', [20, 25, 30, 40, 50, 60, 75, 80, 90, 100]), // 90 and 35 added by mre for precision- VK
   ...unitList('vw', [50, 100]),
   ...unitList('vh', [50, 100]),
   ...fractionList(['1/3', '2/3']),
@@ -23,9 +23,6 @@ const spacing = {
   auto: 'auto',
   0: '0',
   ...remList([4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80, 96]),
-  // adding this based on the margins on the cover being around 4% of pixels
-  // to right and top
-  '4%': '4%',
 };
 
 module.exports = {
@@ -33,6 +30,18 @@ module.exports = {
     allColors,
     screens: { ...pxList([400, 480, 640, 800, 960, 1280, 1360]) },
     fontFamily: {
+      'header-sans': [
+        'header-sans',
+        'sans-serif',
+      ],
+      'cap-header': [
+        'cap-header',
+        'sans-serif',
+      ],
+      'content-serf': [
+        'content-serif',
+        'serif',
+      ],
       sans: [
         'system-ui',
         'BlinkMacSystemFont',
@@ -40,11 +49,6 @@ module.exports = {
         'Helvetica Neue',
         'sans-serif',
       ],
-      headerSans: [
-        'headerSans',
-        'sans-serif',
-      ],
-
     },
     fontSize: {
       ...remList([14, 16, 18, 20, 24, 30, 36, 42, 48, 60, 72, 84, 96, 108]),
@@ -82,18 +86,22 @@ module.exports = {
       black,
       white,
       LadyOrange: '#f16928',
-      HeadsetBlue: '#00acc8',
+      HeadsetBlue: '#00abc7',
+      burstGray: '#3d4d5a',
     },
     backgroundColor: {
       black,
       white,
-      BackdropGray: '#323f47',
+      BackdropGray: '#333d47',
     },
     backgroundSize: {
       auto: 'auto',
       cover: 'cover',
       contain: 'contain',
     },
+    fill: theme => ({
+      burstGray: theme('textColor.burstGray'),
+    }),
     borderWidth: {
       default: '1px',
       ...unitList('px', [2, 4, 8]),
@@ -113,13 +121,22 @@ module.exports = {
       full: '9999px',
     },
     width: { ...sizing, 0: '0' },
-    height: { ...sizing, 0: '0' },
+    height: {
+      ...sizing,
+      0: '0',
+      b1h: '80vh', // custom burst size
+      b2h: '50vh', // custom burst size
+      'container-height': '132vw',
+    },
     minWidth: { ...sizing, 0: '0' },
     minHeight: sizing,
     maxWidth: { ...sizing, none: 'none', 1920: '120rem' },
     maxHeight: sizing,
     padding: { ...spacing },
-    margin: spacing,
+    margin: {
+      ...spacing,
+      tr: '4%', // this is the match the margin at the top and right of the image
+    },
     boxShadow: {
       default: '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
       none: 'none',
@@ -145,6 +162,29 @@ module.exports = {
     },
     stroke: {
       current: 'currentColor',
+    },
+    // VK additions
+    extend: {
+      /*
+       * This is to make the words marketing and trends closer together
+       */
+      lineHeight: {
+        TRENDS: '.875',
+      },
+    },
+    /*
+     * This is being added to allow precision tweaking of items. Particularly,
+     * the font for the all caps portion of the header has a lot of empty space
+     * at the top which inflates the space between lines.
+     */
+    inset: {
+      ...sizing,
+      0: '0px',
+      b1x: '-37%', // custom burst location
+      b2x: '70%', // custom burst locations
+      '5%': '100%',
+      b1y: '15vh', // custom burst locations
+      b2y: '100vh', // custom burst locations
     },
   },
   variants: {

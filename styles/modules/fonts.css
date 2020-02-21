@@ -12,7 +12,7 @@
 }
 /* lower case sanserif header (approximately but not exactly like the original, which I believe is a paid font) */
 @font-face {
-  font-family: 'headerSans';
+  font-family: 'header-sans';
   src: url('../fonts/lower-sans/Fonts/francophilsans-bold.woff') format("woff");
 }
 
