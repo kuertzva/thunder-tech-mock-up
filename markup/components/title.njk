@@ -14,27 +14,29 @@ to be tacked to the top right corner.
 */
 
 {% macro magName() %}
-
-  <h1
-  class='absolute top-0 right-0 inline-block z-500 h-container-height'>
-    <span
-    class='fit inline-block text-white font-header-sans leading-none'
-    data-font='.1225'>
-      marketing
-    </span>
-    <span
-    class='fit inline-block w-30% leading-none absolute top-0
-    right-0'>
-      <img
-      src='./images/thundertech Logotype.svg'
-      class='max-w-100%'/>
-    </span><br/>
-    <span
-    class='fit uppercase text-LadyOrange font-cap-header leading-TRENDS'
-    data-font='.28'
-    >
-      trends
-    </span><br/>
-  </h1>
+  <div
+  class='relative mt-tr mr-tr'>
+    <h1
+    class='absolute top-0 right-0 inline-block z-500 h-container-height'>
+      <span
+      class='fit inline-block text-white font-header-sans leading-none'
+      data-font='.1225'>
+        marketing
+      </span>
+      <span
+      class='fit inline-block w-30% leading-none absolute top-0
+      right-0'>
+        <img
+        src='./images/thundertech Logotype.svg'
+        class='max-w-100%'/>
+      </span><br/>
+      <span
+      class='fit uppercase text-LadyOrange font-cap-header leading-TRENDS'
+      data-font='.28'
+      >
+        trends
+      </span><br/>
+    </h1>
+  </div>
 
 {% endmacro %}

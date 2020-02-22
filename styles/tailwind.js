@@ -124,9 +124,9 @@ module.exports = {
     height: {
       ...sizing,
       0: '0',
-      b1h: '80vh', // custom burst size
-      b2h: '50vh', // custom burst size
-      'container-height': '132vw',
+      b1h: '90vw', // custom burst size
+      b2h: '90vw', // custom burst size
+      container: '132vw',
     },
     minWidth: { ...sizing, 0: '0' },
     minHeight: sizing,
@@ -157,9 +157,6 @@ module.exports = {
       75: '.75',
       100: '1',
     },
-    fill: {
-      current: 'currentColor',
-    },
     stroke: {
       current: 'currentColor',
     },
@@ -180,11 +177,11 @@ module.exports = {
     inset: {
       ...sizing,
       0: '0px',
-      b1x: '-37%', // custom burst location
-      b2x: '70%', // custom burst locations
+      b1x: '-20vw', // custom burst location
+      b2x: '-20vw', // '50vw', // custom burst locations
       '5%': '100%',
-      b1y: '15vh', // custom burst locations
-      b2y: '100vh', // custom burst locations
+      b1y: '22vw', // custom burst locations
+      b2y: '-45vw', // custom burst locations
     },
   },
   variants: {

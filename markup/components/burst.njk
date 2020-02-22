@@ -9,12 +9,12 @@
  * with '#3D4D5A'.
  */
 
-{% macro burst(ht='0%', x='0%', y='0%') %}
+{% macro burst(ht='0%', hort='right', x='0%', vert='top', y='0%', z='0') %}
   <div
-  class='absolute z-0 h-{{ ht }} left-{{ x }} top-{{ y }}'>
+  class='absolute z-{{ z }} h-{{ ht }} {{ hort }}-{{ x }} {{ vert }}-{{ y }}'>
     <img
     src='./images/Trends 2020 Graphics_Half Tone Grey.svg'
-    class='h-100%'>
+    class='min-h-100%'>
   </div>
 
 {% endmacro %}

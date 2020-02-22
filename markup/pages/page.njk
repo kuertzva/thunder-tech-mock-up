@@ -24,10 +24,10 @@
   <p class="{{ textStyles.h1 }}">{{ content.headline }}</p>
   #}
 
-  <div class="container relative mt-tr mr-tr" id="primary-container">
+  <div class="container relative min-h-100vh w-100%" id="primary-container">
     {{ magName() }}
-    {{ burst('b1h', 'b1x', 'b1y') }}
-    {#{ burst('b1h', 'b2x', 'b2y') }#}
+    {{ burst('b1h', 'left', 'b1x', 'top', 'b1y', '0') }}
+    {{ burst('b2h', 'right', 'b2x', 'bottom', 'b2y', '0') }}
   </div>
 
 {% endblock %}
