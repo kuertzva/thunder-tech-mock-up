@@ -126,7 +126,7 @@ module.exports = {
       0: '0',
       b1h: '90vw', // custom burst size
       b2h: '90vw', // custom burst size
-      container: '132vw',
+      body: '132vw',
     },
     minWidth: { ...sizing, 0: '0' },
     minHeight: sizing,

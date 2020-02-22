@@ -4,7 +4,6 @@
 {# Import components #}
 {# {% from "components/example.njk" import example1, example2 %} Keeping this for reference #}
 {% from "components/title.njk" import magName %}
-{% from "components/burst.njk" import burst %}
 
 
 
@@ -18,13 +17,7 @@
 
 {# Actual Page Content #}
 {% block body %}
-
-  {# {{ example1() }} Keeping for reference
-  {{ example2() }}
-  <p class="{{ textStyles.h1 }}">{{ content.headline }}</p>
-  #}
-
-  <div class="container relative min-h-100vh w-100%" id="primary-container">
+  <div class="container relative min-h-100vh w-100% overflow-y-hidden" id="primary-container">
     {{ magName() }}
     {{ burst('b1h', 'left', 'b1x', 'top', 'b1y', '0') }}
     {{ burst('b2h', 'right', 'b2x', 'bottom', 'b2y', '0') }}
