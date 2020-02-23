@@ -16,10 +16,11 @@
 
 {# Actual Page Content #}
 {% block body %}
-  <div class="container relative min-h-100vh w-100% overflow-y-hidden" id="primary-container">
+  <div class="container relative min-h-100vh w-100% overflow-hidden" id="primary-container">
     {{ magName() }}
     {{ burst('b1h', 'left', 'b1x', 'top', 'b1y') }}
     {{ burst('b2h', 'right', 'b2x', 'bottom', 'b2y') }}
+    {{ lady('lh', 'lx', 'ly') }}
   </div>
 
 {% endblock %}

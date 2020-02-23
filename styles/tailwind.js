@@ -126,6 +126,7 @@ module.exports = {
       0: '0',
       b1h: '90vw', // custom burst size
       b2h: '90vw', // custom burst size
+      lh: '105vw',
       body: '132vw',
     },
     minWidth: { ...sizing, 0: '0' },
@@ -179,9 +180,11 @@ module.exports = {
       0: '0px',
       b1x: '-20vw', // custom burst location
       b2x: '-20vw', // '50vw', // custom burst locations
+      lx: '-45vw',
       '5%': '100%',
       b1y: '22vw', // custom burst locations
       b2y: '-45vw', // custom burst locations
+      ly: '-2vw',
     },
   },
   variants: {
