@@ -6,6 +6,7 @@
 {% from "components/title.njk" import magName %}
 {% from "components/burst.njk" import burst %}
 {% from "components/lady.njk" import lady %}
+{% from "components/feature.njk" import feature %}
 
 {# Set Page Title #}
 {% set title = 'MT::V11' %}
@@ -20,7 +21,13 @@
     {{ magName( subheader ) }}
     {{ burst('b1h', 'left', 'b1x', 'top', 'b1y') }}
     {{ burst('b2h', 'right', 'b2x', 'bottom', 'b2y') }}
+    <div
+    class="w-100% absolute left-0% bottom-0">
     {{ lady('lh', 'lx', 'ly') }}
+    {% for article in articles %}
+      {{ feature(article) }}
+    {% endfor %}
+    </div>
   </div>
 
 {% endblock %}

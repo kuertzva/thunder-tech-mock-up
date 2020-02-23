@@ -1,0 +1,11 @@
+{% extends "layouts/components.njk" %}
+
+{% macro feature(article) %}
+  <h3
+  class='text-white'>
+    <span>{{article.title}}</span></br>
+    <span>{{article.tagLine}}</span></br>
+    <span>pg.<span>{{article.page}}</span></span>
+  </h3>
+
+{% endmacro %}
