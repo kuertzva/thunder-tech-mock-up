@@ -4,9 +4,8 @@
 {# Import components #}
 {# {% from "components/example.njk" import example1, example2 %} Keeping this for reference #}
 {% from "components/title.njk" import magName %}
-
-
-
+{% from "components/burst.njk" import burst %}
+{% from "components/lady.njk" import lady %}
 
 {# Set Page Title #}
 {% set title = 'MT::V11' %}
@@ -19,8 +18,8 @@
 {% block body %}
   <div class="container relative min-h-100vh w-100% overflow-y-hidden" id="primary-container">
     {{ magName() }}
-    {{ burst('b1h', 'left', 'b1x', 'top', 'b1y', '0') }}
-    {{ burst('b2h', 'right', 'b2x', 'bottom', 'b2y', '0') }}
+    {{ burst('b1h', 'left', 'b1x', 'top', 'b1y') }}
+    {{ burst('b2h', 'right', 'b2x', 'bottom', 'b2y') }}
   </div>
 
 {% endblock %}
