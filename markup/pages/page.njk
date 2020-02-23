@@ -17,7 +17,7 @@
 {# Actual Page Content #}
 {% block body %}
   <div class="container relative min-h-100vh w-100% overflow-hidden" id="primary-container">
-    {{ magName() }}
+    {{ magName( subheader ) }}
     {{ burst('b1h', 'left', 'b1x', 'top', 'b1y') }}
     {{ burst('b2h', 'right', 'b2x', 'bottom', 'b2y') }}
     {{ lady('lh', 'lx', 'ly') }}

@@ -13,7 +13,7 @@ B) Both the entire <h1> tag and the and the image within it need
 to be tacked to the top right corner.
 */
 
-{% macro magName() %}
+{% macro magName( subheader ) %}
   <div
   class='relative mt-tr mr-tr'>
     <div
@@ -42,7 +42,7 @@ to be tacked to the top right corner.
       <h2
       class='fit absolute font-content-serif right-0 text-white'
       data-font='.023'>
-        the futurist's field guide | volume 11
+        {{ subheader.tagLine }} | volume {{subheader.volume}}
       </h2>
     </div>
   </div>
