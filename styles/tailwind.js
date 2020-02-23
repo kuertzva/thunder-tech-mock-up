@@ -38,7 +38,7 @@ module.exports = {
         'cap-header',
         'sans-serif',
       ],
-      'content-serf': [
+      'content-serif': [
         'content-serif',
         'serif',
       ],
