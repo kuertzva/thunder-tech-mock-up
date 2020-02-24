@@ -165,8 +165,9 @@ module.exports = {
        * This is to make the words marketing and trends closer together
        */
       lineHeight: {
-        pg: '2.247',
-        subhead: '1.7',
+        pg: '0',
+        num: '.4',
+        subhead: '1.4',
         TRENDS: '.875',
 
       },
