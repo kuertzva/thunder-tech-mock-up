@@ -13,7 +13,7 @@ const allColors = {
 const sizing = {
   auto: 'auto',
   ...remList([16, 24, 32, 48, 64, 128, 256, 320, 480]),
-  ...unitList('%', [20, 25, 30, 40, 50, 60, 75, 80, 90, 100]), // 90 and 35 added by mre for precision- VK
+  ...unitList('%', [20, 25, 30, 40, 50, 60, 75, 80, 100]),
   ...unitList('vw', [50, 100]),
   ...unitList('vh', [50, 100]),
   ...fractionList(['1/3', '2/3']),
@@ -52,10 +52,9 @@ module.exports = {
     },
     fontSize: {
       ...remList([14, 16, 18, 20, 24, 30, 36, 42, 48, 60, 72, 84, 96, 108]),
-      // this is to size the title header so that the letters always
-      // stretch the length of the screen
+      // I'm using the font size to proportion the elements size and
+      // spacing. This allows the REM to be 1 vw (the default)
       '1vw': '1vw',
-      '15vw': '15vw',
     },
     scaledFontSize: [
       '12-16',
@@ -100,9 +99,6 @@ module.exports = {
       cover: 'cover',
       contain: 'contain',
     },
-    fill: theme => ({
-      burstGray: theme('textColor.burstGray'),
-    }),
     borderWidth: {
       default: '1px',
       ...unitList('px', [2, 4, 8]),
@@ -135,7 +131,6 @@ module.exports = {
     padding: { ...spacing },
     margin: {
       ...spacing,
-      tr: '4vw', // this is the match the margin at the top and right of the image
     },
     boxShadow: {
       default: '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
@@ -159,29 +154,6 @@ module.exports = {
     },
     stroke: {
       current: 'currentColor',
-    },
-    // VK additions
-    extend: {
-      /*
-       * This is to make the words marketing and trends closer together
-       */
-      lineHeight: {
-        pg: '0',
-        num: '.4',
-        subhead: '1.4',
-        TRENDS: '.875',
-
-      },
-    },
-    /*
-     * This is being added to allow precision tweaking of items. Particularly,
-     * the font for the all caps portion of the header has a lot of empty space
-     * at the top which inflates the space between lines.
-     */
-    inset: {
-      ...sizing,
-      0: '0px',
-      '5%': '100%',
     },
   },
   variants: {
