@@ -10,10 +10,10 @@
  * deprecated classes for reference: h-{{ ht }} left-{{ x }} bottom-{{ y }}
  */
 
-{% macro lady(ht='0%', x='0%', y='0%') %}
+{% macro lady(h='0vw', w='0vw', x='0vw', y='0vw') %}
   <div
-  class='absolute z-100'
-  style='height:{{ ht }}; left:{{ x }}; bottom:{{ y }}'>
+  class='z-100 absolute'
+  style="height:{{ h }}; width:{{ w }}; left:{{ x }}; top:{{ y }};">
     <img
     src='./images/Trends 2020 Graphics_Cover Art.svg'
     class='h-100% overflow-visible'/>

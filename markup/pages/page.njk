@@ -6,7 +6,8 @@
 {% from "components/title.njk" import magName %}
 {% from "components/burst.njk" import burst %}
 {% from "components/lady.njk" import lady %}
-{% from "components/feature.njk" import feature %}
+{% from "components/featureBox.njk" import featureBox%}
+
 
 {# Set Page Title #}
 {% set title = 'MT::V11' %}
@@ -21,13 +22,8 @@
     {{ magName( subheader ) }}
     {{ burst('90vw', 'left', '-20vw', 'top', '22vw') }}
     {{ burst('90vw', 'right', '-20vw', 'bottom', '-45vw') }}
-    <div
-    class="w-100% absolute left-0 bottom-0">
-    {{ lady('105vw', '-45vw', '-2vw') }}
-    {% for article in articles %}
-      {{ feature(article) }}
-    {% endfor %}
-    </div>
+    {{ lady('104vw', '145vw', '-44vw', '30vw') }}
+    {{ featureBox('20w', '4vw', '50vw', articles) }}
   </div>
 
 {% endblock %}

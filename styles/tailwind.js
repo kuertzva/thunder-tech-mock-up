@@ -124,6 +124,7 @@ module.exports = {
     height: {
       ...sizing,
       0: '0',
+      featureLine: '83vw',
       body: '132vw',
     },
     minWidth: { ...sizing, 0: '0' },
@@ -133,7 +134,7 @@ module.exports = {
     padding: { ...spacing },
     margin: {
       ...spacing,
-      tr: '4%', // this is the match the margin at the top and right of the image
+      tr: '4vw', // this is the match the margin at the top and right of the image
     },
     boxShadow: {
       default: '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
@@ -164,7 +165,10 @@ module.exports = {
        * This is to make the words marketing and trends closer together
        */
       lineHeight: {
+        pg: '2.247',
+        subhead: '1.7',
         TRENDS: '.875',
+
       },
     },
     /*

@@ -2,10 +2,28 @@
 
 {% macro feature(article) %}
   <h3
-  class='text-white'>
-    <span>{{article.title}}</span></br>
-    <span>{{article.tagLine}}</span></br>
-    <span>pg.<span>{{article.page}}</span></span>
+  class='text-white'
+  style='text-align: right;'>
+    <span
+    class='fit uppercase text-{{ article.color }} font-cap-header leading-TRENDS'
+    data-font='.0395'>
+      {{article.title}}
+    </span></br>
+    <pre
+    class='fit font-content-serif leading-subhead'
+    data-font='.0245'>
+      {{article.tagLine}}
+    </pre></br>
+    <span
+      class='fit font-header-sans display leading-tight'
+      data-font='.074'>
+      <span
+      class='fit leading-normal align-top leading-subhead'
+      data-font='.04'>
+        pg.
+      </span>
+        {{article.page}}
+      </span>
   </h3>
 
 {% endmacro %}
