@@ -7,11 +7,15 @@
  * The SVG file used is not the one provided but rather a copy
  * I modified by replacing the hex value '#212B33' on line 25
  * with '#3D4D5A'.
+ *
+ *
+ * depricated classes for reference: 1h-{{ ht }} {{ hort }}-{{ x }} {{ vert }}-{{ y }}
  */
 
 {% macro burst(ht='0%', hort='right', x='0%', vert='top', y='0%') %}
   <div
-  class='absolute z-0 h-{{ ht }} {{ hort }}-{{ x }} {{ vert }}-{{ y }}'>
+  class='absolute z-0 '
+  style='height:{{ ht }}; {{ hort }}:{{ x }}; {{ vert }}:{{ y }};'>
     <img
     src='./images/Trends 2020 Graphics_Half Tone Grey.svg'
     class='h-100% overflow-visible'>

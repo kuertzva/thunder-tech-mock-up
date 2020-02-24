@@ -19,11 +19,11 @@
 {% block body %}
   <div class="container relative min-h-100vh w-100% overflow-hidden" id="primary-container">
     {{ magName( subheader ) }}
-    {{ burst('b1h', 'left', 'b1x', 'top', 'b1y') }}
-    {{ burst('b2h', 'right', 'b2x', 'bottom', 'b2y') }}
+    {{ burst('90vw', 'left', '-20vw', 'top', '22vw') }}
+    {{ burst('90vw', 'right', '-20vw', 'bottom', '-45vw') }}
     <div
-    class="w-100% absolute left-0% bottom-0">
-    {{ lady('lh', 'lx', 'ly') }}
+    class="w-100% absolute left-0 bottom-0">
+    {{ lady('105vw', '-45vw', '-2vw') }}
     {% for article in articles %}
       {{ feature(article) }}
     {% endfor %}

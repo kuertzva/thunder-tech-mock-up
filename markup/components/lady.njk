@@ -7,11 +7,13 @@
  * The SVG file used is not the one provided but rather a copy
  * I modified by replacing the hex value '#212B33' on line 25
  * with '#3D4D5A'.
+ * deprecated classes for reference: h-{{ ht }} left-{{ x }} bottom-{{ y }}
  */
 
 {% macro lady(ht='0%', x='0%', y='0%') %}
   <div
-  class='absolute z-100 h-{{ ht }} left-{{ x }} bottom-{{ y }}'>
+  class='absolute z-100'
+  style='height:{{ ht }}; left:{{ x }}; bottom:{{ y }}'>
     <img
     src='./images/Trends 2020 Graphics_Cover Art.svg'
     class='h-100% overflow-visible'/>
