@@ -1,25 +1,29 @@
 {% extends "layouts/components.njk" %}
 
-{% macro feature(article) %}
+{% macro feature(article, layout) %}
   <h3
-  class='text-white'
-  style='text-align: right; margin-bottom: 5.9vw;'>
+  class='text-white text-right'
+  style='margin-bottom: {{ layout.buffer }};'>
     <span
-    class='fit uppercase text-{{ article.color }} font-cap-header leading-TRENDS'
-    data-font='.0395'>
+    class='uppercase text-{{ article.color }} font-cap-header'
+    style='font-size:{{ layout.fontSize.line1 }};
+    line-height: {{ layout.lineHeight.line1 }};'>
       {{article.title}}
-    </span></br>
-    <pre
-    class='fit font-content-serif leading-subhead'
-    data-font='.0245'>
-      {{article.tagLine}}
-    </pre>
+    </span>
     <span
-      class='fit font-header-sans display leading-num'
-      data-font='.074'>
+    class='font-content-serif leading-subhead whitespace-pre-line'
+    style='font-size:{{ layout.fontSize.line2 }};
+    line-height: {{ layout.lineHeight.line2 }};'>
+      {{article.tagLine}}
+    </span>
+    <span
+     class='fit font-header-sans display leading-num'
+     style='font-size:{{ layout.fontSize.line3 }};
+    line-height: {{ layout.lineHeight.line3 }};'>
       <span
       class='fit leading-normal align-top leading-pg'
-      data-font='.04'>
+      style='font-size:{{ layout.fontSize.line4 }};
+      line-height: {{ layout.lineHeight.line4 }};'>
         pg.
       </span>
         {{article.page}}

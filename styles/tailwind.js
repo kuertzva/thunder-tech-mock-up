@@ -54,6 +54,7 @@ module.exports = {
       ...remList([14, 16, 18, 20, 24, 30, 36, 42, 48, 60, 72, 84, 96, 108]),
       // this is to size the title header so that the letters always
       // stretch the length of the screen
+      '1vw': '1vw',
       '15vw': '15vw',
     },
     scaledFontSize: [

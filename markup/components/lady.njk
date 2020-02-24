@@ -7,13 +7,18 @@
  * The SVG file used is not the one provided but rather a copy
  * I modified by replacing the hex value '#212B33' on line 25
  * with '#3D4D5A'.
- * deprecated classes for reference: h-{{ ht }} left-{{ x }} bottom-{{ y }}
+ *
+ *
+ * Due to it providing me the ability to apply classes directly to the image,
+ * I will be using an img tag instead of the logo folder include syntax
  */
 
-{% macro lady(h='0vw', w='0vw', x='0vw', y='0vw') %}
+{% macro lady(layout) %}
   <div
   class='z-100 absolute'
-  style="height:{{ h }}; width:{{ w }}; left:{{ x }}; top:{{ y }};">
+  style="height:{{ layout.height }}; width: {{layout.width}};
+  {{ layout.hort }}:{{ layout.x }}; {{ layout.vert }}:{{ layout.y }};"
+  alt='cover art'>
     <img
     src='./images/Trends 2020 Graphics_Cover Art.svg'
     class='h-100% overflow-visible'/>

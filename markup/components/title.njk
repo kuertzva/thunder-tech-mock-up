@@ -13,7 +13,10 @@ B) Both the entire <h1> tag and the and the image within it need
 to be tacked to the top right corner.
 */
 
-{% macro magName( subheader ) %}
+{% macro magName( subheader, layout ) %}
+
+
+{#
   <div
   class='relative mt-tr mr-tr'>
     <div
@@ -45,6 +48,42 @@ to be tacked to the top right corner.
         {{ subheader.tagLine }} | volume {{subheader.volume}}
       </h2>
     </div>
+  </div>#}
+
+  <div
+  class='absolute inline-block z-500'
+  style='top: {{ layout.inset.y }}; right:{{ layout.inset.x }};'>
+    <h1
+    class=''
+    role='banner'>
+      <span
+      class='inline-block text-white font-header-sans'
+      style='font-size:{{ layout.fontSize.line1 }}; line-height:{{ layout.lineHeight.line1 }};'
+      data-font='{{ layout.fontFactor.line1 }}'>
+
+        marketing
+      </span>
+      <span
+      class='inline-block w-30% leading-none absolute top-0 right-0'
+      style='line-height:{{ layout.lineHeight.logo }};'
+      alt='Thunder Tech logo'>
+
+        {% include 'icons/thundertech Logotype.svg' %}
+
+      </span><br/>
+      <span
+      class='uppercase text-LadyOrange font-cap-header'
+      style='font-size:{{ layout.fontSize.line2 }}; line-height:{{ layout.lineHeight.line2 }};'
+      data-font='{{ layout.fontFactor.line2 }}'>
+        trends
+      </span><br/>
+    </h1>
+    <h2
+    class='font-content-serif text-white text-right'
+    style='font-size:{{ layout.fontSize.line3 }};'
+    data-font='{{ layout.fontFactor.line3 }}'>
+      {{ subheader.tagLine }} | volume {{subheader.volume}}
+    </h2>
   </div>
 
 {% endmacro %}

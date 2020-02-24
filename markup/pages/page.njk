@@ -18,12 +18,14 @@
 
 {# Actual Page Content #}
 {% block body %}
-  <div class="container relative min-h-100vh w-100% overflow-hidden" id="primary-container">
-    {{ magName( subheader ) }}
-    {{ burst('90vw', 'left', '-20vw', 'top', '22vw') }}
-    {{ burst('90vw', 'right', '-20vw', 'bottom', '-45vw') }}
-    {{ lady('104vw', '145vw', '-44vw', '30vw') }}
-    {{ featureBox('20w', '4vw', '50vw', articles) }}
+  <div
+  class="container relative min-h-100vh w-100% overflow-hidden"
+  id="primary-container">
+    {{ magName( subheader, layout.header ) }}
+    {{ burst( layout.burst1 )}}
+    {{ burst( layout.burst2 ) }}
+    {{ lady( layout.lady ) }}
+    {{ featureBox( layout.featureBox, articles ) }}
   </div>
 
 {% endblock %}

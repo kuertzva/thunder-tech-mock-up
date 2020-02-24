@@ -2,13 +2,14 @@
 
 {% from "components/feature.njk" import feature %}
 
-{% macro featureBox(w='0vw', x='0vw', y='0vw', features=[]) %}
+{% macro featureBox(layout, features=[]) %}
 
   <div
   class='absolute z-200'
-  style='width:{{ w }}; right:{{ x }}; top:{{ y }};'/>
+  style='width:{{ layout.width }}; {{ layout.hort }}:{{ layout.x }};
+  {{ layout.vert}}:{{ layout.y }};'/>
     {% for f in features %}
-      {{ feature(f) }}
+      {{ feature(f, layout.feature) }}
     {% endfor %}
   </div>
 
