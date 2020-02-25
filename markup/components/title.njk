@@ -14,9 +14,10 @@ to be tacked to the top right corner.
 */
 
 {% macro magName( subheader, layout ) %}
-  <div
-  class='absolute inline-block z-100'
-  style='top: {{ layout.inset.y }}; right:{{ layout.inset.x }};'>
+  <a
+  class='absolute inline-block z-200'
+  style='top: {{ layout.inset.y }}; right:{{ layout.inset.x }};'
+  href='./page.html'>
     <!-- Title -->
     <h1
     class='right-slide'
@@ -40,6 +41,6 @@ to be tacked to the top right corner.
     data-font='{{ layout.fontFactor.line3 }}'>
       {{ subheader.tagLine }} | volume {{subheader.volume}}
     </h2>
-  </div>
+  </a>
 
 {% endmacro %}

@@ -20,6 +20,9 @@ class='text-1vw'>
       <main
       class="container relative min-h-100vh w-100% overflow-hidden"
       id="primary-container">
+        {% from "components/title.njk" import magName %}
+        {% from "components/logo.njk" import logo %}
+        {% from "components/burst.njk" import burst %}
         {{ magName( subheader, layout.header ) }}
         {{ logo( layout.logo ) }}
         {{ burst( layout.burst1 )}}

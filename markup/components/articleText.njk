@@ -1,0 +1,13 @@
+{% extends "layouts/components.njk" %}
+
+
+{% macro articleText( article, layout ) %}
+  <!-- Article Text -->
+  <p
+  class='absolute z-500 text-white whitespace-pre
+  font-content-serif text-2em pl-3em'
+  style='{{layout.hort}}:{{layout.x}};{{layout.vert}}:{{layout.textY}};'>
+    {{article.content}}
+  </p>
+
+{% endmacro %}

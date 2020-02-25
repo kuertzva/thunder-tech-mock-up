@@ -1,0 +1,22 @@
+{% extends "layouts/components.njk" %}
+
+
+{% macro articleTitle( article, layout ) %}
+  <!-- Article Title -->
+  <div
+  class='absolute inline-block'
+  style='{{layout.hort}}:{{layout.x}};{{layout.vert}}:{{layout.titleY}};'>
+    <h1
+    class='inline-block uppercase text-{{ article.color }}
+    font-cap-header text-5em'>
+      {{ article.title }}
+    </h1><br>
+    <h2
+    class='inline-block font-content-serif text-white text-3em
+    pl-3em'>
+      {{ article.tagLine }}
+    </h2>
+  </div>
+
+
+{% endmacro %}

@@ -69,8 +69,14 @@ const layout = {
         line3: '1.2',
         line4: '2',
       },
-
     },
+  },
+  article: {
+    hort: 'left',
+    vert: 'top',
+    x: '4em',
+    titleY: '45em',
+    textY: '50em',
   },
 }
 

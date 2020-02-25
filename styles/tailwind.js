@@ -23,6 +23,9 @@ const spacing = {
   auto: 'auto',
   0: '0',
   ...remList([4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 80, 96]),
+  // responsively sized padding/ect.
+  ...unitList('em', [1, 2, 3, 4, 5, 6, 7]),
+
 };
 
 module.exports = {
@@ -52,6 +55,8 @@ module.exports = {
     },
     fontSize: {
       ...remList([14, 16, 18, 20, 24, 30, 36, 42, 48, 60, 72, 84, 96, 108]),
+      // responsively sized text
+      ...unitList('em', [1, 2, 3, 4, 5, 6, 7]),
       // I'm using the font size to proportion the elements size and
       // spacing. This allows the REM to be 1 vw (the default)
       '1vw': '1vw',
