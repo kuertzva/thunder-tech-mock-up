@@ -20,8 +20,12 @@ const layout = {
       line2: trendHeight,
       line3: 'notYetNeeded',
     },
-
-
+  },
+  logo: {
+    hort: 'right',
+    vert: 'top',
+    x: rightMargin,
+    y: topMargin,
   },
   burst1: {
     height: '95em',

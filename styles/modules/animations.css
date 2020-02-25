@@ -1,0 +1,76 @@
+/*
+ * Because this isn't really being used and I'm trying to demonstrate my
+ * abilities, I'm going to add some animations that may be a little loud.
+ * That being said, this is a rendition of a magazine cover, so it should
+ * be able to press the boundaries of good taste. Forgive me if I am wrong.
+ */
+
+ .perpetual-rotate {
+   /*
+    * This is to make the bursts in the back slowly rotate.
+    * In real life, this may be bad from an accessibility perspective (
+    * I don't know how someone responding to epilepsy might respond), but
+    * I also felt that a basely perceptible movement suited this image.
+    *
+    */
+    animation-name: rotate;
+    animation-duration: 500s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+ }
+
+ @keyframes rotate {
+   0%   {transform: rotate(0deg);}
+   100% {transform: rotate(360deg);}
+ }
+
+ .right-slide {
+   /*
+    * This will slide the element from off screen on the left to its
+    * static position on page load
+    */
+    animation: right-slide;
+    animation-duration: .5s;
+    animation-delay: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+ }
+
+ @keyframes right-slide {
+   0%    {transform:translateX(-50vw);}
+   100%  {transfrom:translateX(0vw);}
+ }
+
+ .left-slide {
+   /*
+    * This will slide the element from off screen on the right to its
+    * static position on page load
+    */
+    animation: left-slide;
+    animation-duration: .5s;
+    animation-delay: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+ }
+
+ @keyframes left-slide {
+   0%    {transform:translateX(50vw);}
+   100%  {transfrom:translateX(0vw);}
+ }
+
+ .up-slide {
+   /*
+    * This will slide the element from off screen at the bottom to its
+    * static position on page load
+    */
+    animation: up-slide;
+    animation-duration: .5s;
+    animation-delay: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+ }
+
+ @keyframes up-slide {
+   0%    {transform:translateY(110vw);}
+   100%  {transfrom:translateY(0vw);}
+ }

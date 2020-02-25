@@ -9,13 +9,21 @@ class='text-1vw'>
     <title>{{ title }}</title>
     <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.js"></script>
     <link rel="stylesheet" href="./main.css">
+    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16" />
     {% block head %}
     {% endblock %}
   </head>
 
   <body class="bg-BackdropGray">
     <div class="min-h-100vh overflow-x-hidden mx-auto max-w-1920" data-hook="overflow" role="presentation">
-      <main>
+      <main
+      class="container relative min-h-100vh w-100% overflow-hidden"
+      id="primary-container">
+        {{ magName( subheader, layout.header ) }}
+        {{ logo( layout.logo ) }}
+        {{ burst( layout.burst1 )}}
+        {{ burst( layout.burst2 ) }}
         {% block body %}
         {% endblock %}
       </main>

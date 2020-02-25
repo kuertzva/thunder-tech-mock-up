@@ -14,72 +14,28 @@ to be tacked to the top right corner.
 */
 
 {% macro magName( subheader, layout ) %}
-
-
-{#
   <div
-  class='relative mt-tr mr-tr'>
-    <div
-    class='absolute top-0 right-0 inline-block z-500'>
-      <h1
-      class=''>
-        <span
-        class='fit inline-block text-white font-header-sans leading-none'
-        data-font='.1225'>
-          marketing
-        </span>
-        <span
-        class='fit inline-block w-30% leading-none absolute top-0
-        right-0'>
-          <img
-          src='./images/thundertech Logotype.svg'
-          class='max-w-100%'/>
-        </span><br/>
-        <span
-        class='fit uppercase text-LadyOrange font-cap-header leading-TRENDS'
-        data-font='.28'
-        >
-          trends
-        </span><br/>
-      </h1>
-      <h2
-      class='fit absolute font-content-serif right-0 text-white'
-      data-font='.023'>
-        {{ subheader.tagLine }} | volume {{subheader.volume}}
-      </h2>
-    </div>
-  </div>#}
-
-  <div
-  class='absolute inline-block z-500'
+  class='absolute inline-block z-100'
   style='top: {{ layout.inset.y }}; right:{{ layout.inset.x }};'>
+    <!-- Title -->
     <h1
-    class=''
+    class='right-slide'
     role='banner'>
       <span
       class='inline-block text-white font-header-sans'
-      style='font-size:{{ layout.fontSize.line1 }}; line-height:{{ layout.lineHeight.line1 }};'
-      data-font='{{ layout.fontFactor.line1 }}'>
+      style='font-size:{{ layout.fontSize.line1 }}; line-height:{{ layout.lineHeight.line1 }};'>
 
         marketing
-      </span>
-      <span
-      class='inline-block w-30% leading-none absolute top-0 right-0'
-      style='line-height:{{ layout.lineHeight.logo }};'
-      alt='Thunder Tech logo'>
-
-        {% include 'icons/thundertech Logotype.svg' %}
-
       </span><br/>
       <span
       class='uppercase text-LadyOrange font-cap-header'
-      style='font-size:{{ layout.fontSize.line2 }}; line-height:{{ layout.lineHeight.line2 }};'
-      data-font='{{ layout.fontFactor.line2 }}'>
+      style='font-size:{{ layout.fontSize.line2 }}; line-height:{{ layout.lineHeight.line2 }};'>
         trends
       </span><br/>
     </h1>
+    <!-- Subtitle -->
     <h2
-    class='font-content-serif text-white text-right'
+    class='font-content-serif text-white text-right left-slide'
     style='font-size:{{ layout.fontSize.line3 }};'
     data-font='{{ layout.fontFactor.line3 }}'>
       {{ subheader.tagLine }} | volume {{subheader.volume}}

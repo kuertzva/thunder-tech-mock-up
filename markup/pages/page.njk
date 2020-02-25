@@ -2,8 +2,8 @@
 {% extends "layouts/default.njk" %}
 
 {# Import components #}
-{# {% from "components/example.njk" import example1, example2 %} Keeping this for reference #}
 {% from "components/title.njk" import magName %}
+{% from "components/logo.njk" import logo %}
 {% from "components/burst.njk" import burst %}
 {% from "components/lady.njk" import lady %}
 {% from "components/featureBox.njk" import featureBox%}
@@ -18,14 +18,9 @@
 
 {# Actual Page Content #}
 {% block body %}
-  <div
-  class="container relative min-h-100vh w-100% overflow-hidden"
-  id="primary-container">
-    {{ magName( subheader, layout.header ) }}
-    {{ burst( layout.burst1 )}}
-    {{ burst( layout.burst2 ) }}
-    {{ lady( layout.lady ) }}
-    {{ featureBox( layout.featureBox, articles ) }}
-  </div>
+
+  {{ lady( layout.lady ) }}
+  {{ featureBox( layout.featureBox, articles ) }}
+
 
 {% endblock %}

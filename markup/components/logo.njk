@@ -1,0 +1,16 @@
+{% extends "layouts/components.njk" %}
+
+{% macro logo(layout) %}
+  <!-- logo -->
+  <a
+  class='inline-block w-30% leading-none absolute left-slide
+  z-200'
+  style='line-height:{{ layout.lineHeight.logo }}; {{layout.hort}}:{{layout.x}};
+  {{layout.vert}}:{{ layout.y }};'
+  href='https://www.thundertech.com/'
+  alt='Thunder Tech logo'>
+
+    {% include 'icons/thundertech Logotype.svg' %}
+
+  </a>
+{% endmacro %}
