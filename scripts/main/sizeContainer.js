@@ -9,19 +9,15 @@ function factorHeadlines() {
 
   const viewHeight = parseInt($(window).height(), 10);
   const headerHeight = parseInt($('#header').height(), 10);
-  console.log(headerHeight);
   const coverArtHeight = parseInt($('#coverArt ').height(), 10);
   const featureBox = $('#featureBox');
   const featureBoxHeight = parseInt($(featureBox).height(), 10);
 
   const deadSpace = viewHeight - (headerHeight + coverArtHeight + featureBoxHeight);
-  console.log(deadSpace);
 
   const newTop = headerHeight + 50;
-  console.log(newTop);
 
   if (deadSpace > -30) {
-    console.log('triggered')
     $(featureBox).css('font-size', '');
     $(featureBox).css('top', '');
     $(featureBox).css('font-size', '6px');
@@ -54,11 +50,9 @@ function resize() {
 
   // ensure we don't get a result that doesn't fill screen
   if (viewHeight < proposedHeight) {
-    console.log('resize')
     $(container).height(`${proposedHeight}px`);
   } else {
     factorHeadlines();
-    console.log('factor')
   }
 }
 
