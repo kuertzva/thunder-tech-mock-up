@@ -4,16 +4,13 @@
 
  That being said, I'm not going to crazy with these. If I were taking them seriously,
  I would have a separate, smaller header. Also, nav bar.
-
 #}
 
 {# Extend the Default Layout #}
 {% extends "layouts/default.njk" %}
 
 {# Import components #}
-{% from "components/articleTitle.njk" import articleTitle %}
-{% from "components/articleText.njk" import articleText %}
-
+{% from "components/article.njk" import article %}
 
 {# Set Page Title #}
 {% set title = 'MT::V11' %}
@@ -24,7 +21,5 @@
 
 {# Actual Page Content #}
 {% block body %}
-  {{ articleTitle( pg10, layout.article ) }}
-  {{ articleText( pg10, layout.article ) }}
-
+{{ article( dataPg10, dataLayout.article )}}
 {% endblock %}

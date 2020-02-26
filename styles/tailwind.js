@@ -12,7 +12,7 @@ const allColors = {
 
 const sizing = {
   auto: 'auto',
-  ...remList([16, 24, 32, 48, 64, 128, 256, 320, 480]),
+  ...remList([16, 24, 32, 48, 64, 128, 256, 320, 480, 960]), // Added 960 to max out width
   ...unitList('%', [20, 25, 30, 40, 50, 60, 75, 80, 100]),
   ...unitList('vw', [50, 100]),
   ...unitList('vh', [50, 100]),
@@ -31,7 +31,9 @@ const spacing = {
 module.exports = {
   theme: {
     allColors,
-    screens: { ...pxList([400, 480, 640, 800, 960, 1280, 1360]) },
+    screens: {
+      ...pxList([400, 480, 640, 800, 960, 1280, 1360]),
+    },
     fontFamily: {
       'header-sans': [
         'header-sans',
@@ -60,6 +62,8 @@ module.exports = {
       // I'm using the font size to proportion the elements size and
       // spacing. This allows the REM to be 1 vw (the default)
       '1vw': '1vw',
+      // font size cap at 960 width
+      cap: '9.6px',
     },
     scaledFontSize: [
       '12-16',
@@ -217,7 +221,7 @@ module.exports = {
     boxShadow: ['responsive', 'hover', 'focus', 'group-hover'],
     fill: [],
     stroke: [],
-    fontSize: [],
+    fontSize: ['responsive'],
   },
   corePlugins: {
     container: false,

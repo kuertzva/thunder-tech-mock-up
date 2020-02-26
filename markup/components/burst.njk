@@ -1,24 +1,24 @@
+{#
+ This is the gray bursts in the background.
+
+ The SVG file used is not the one provided but rather a copy
+ I modified by replacing the hex value '#212B33' on line 25
+ with '#3D4D5A'.
+
+ For this reason, I am pulling the image from the root
+ images folder as using the icons folder breaks this
+ fix and prevents having the burst off screen.
+#}
+
+{# Extend the Default Layout #}
 {% extends "layouts/components.njk" %}
 
-/*
- * This is the gray bursts in the background. Because there
- * will be 2 of them, I'm making it resuable.
- *
- * The SVG file used is not the one provided but rather a copy
- * I modified by replacing the hex value '#212B33' on line 25
- * with '#3D4D5A'.
- *
- * For this reason, I am pulling the image from the root
- * images folder as using the icons folder breaks this
- * fix
- */
-
-
-{% macro burst(layout) %}
+{% macro burst( layout ) %}
   <!-- background graphic -->
   <div
   class='absolute z-0 perpetual-rotate'
-  style='height:{{ layout.height }}; {{ layout.hort }}:{{ layout.x }};
+  style='height:{{ layout.height }};
+  {{ layout.hort }}:{{ layout.x }};
   {{ layout.vert }}:{{ layout.y }};'>
     <img
     src='./images/Trends 2020 Graphics_Half Tone Grey.svg'

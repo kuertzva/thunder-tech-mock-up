@@ -1,3 +1,8 @@
+{#
+  Homepage for content.
+#}
+
+
 {# Extend the Default Layout #}
 {% extends "layouts/default.njk" %}
 
@@ -16,8 +21,8 @@
 {# Actual Page Content #}
 {% block body %}
 
-  {{ lady( layout.lady ) }}
-  {{ featureBox( layout.featureBox, articles ) }}
+  {{ lady( dataLayout.lady ) }}
+  {{ featureBox( dataLayout.featureBox, dataArticles ) }}
 
 
 {% endblock %}

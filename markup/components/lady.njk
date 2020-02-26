@@ -1,28 +1,27 @@
+{#
+  Adds in cover art.
+
+  Used img tag instead of logo folder because I was having trouble
+  getting the cover art to draw out of frame.
+#}
+
+{# Extend the Default Layout #}
 {% extends "layouts/components.njk" %}
 
-/*
- * This is the gray bursts in the background. Because there
- * will be 2 of them, I'm making it resuable.
- *
- * The SVG file used is not the one provided but rather a copy
- * I modified by replacing the hex value '#212B33' on line 25
- * with '#3D4D5A'.
- *
- *
- * Due to it providing me the ability to apply classes directly to the image,
- * I will be using an img tag instead of the logo folder include syntax
- */
-
-{% macro lady(layout) %}
+{% macro lady( layout ) %}
   <!-- Cover Art -->
-  <div
+  <a
   class='z-100 absolute up-slide'
-  style="height:{{ layout.height }}; width: {{layout.width}};
-  {{ layout.hort }}:{{ layout.x }}; {{ layout.vert }}:{{ layout.y }};"
-  alt='cover art'>
+  style="height:{{ layout.height }};
+  width: {{layout.width}};
+  {{ layout.hort }}:{{ layout.x }};
+  {{ layout.vert }}:{{ layout.y }};"
+  href='./altPage.html'
+  id='coverArt'>
     <img
     src='./images/Trends 2020 Graphics_Cover Art.svg'
-    class='h-100% overflow-visible'/>
-  </div>
+    class='h-100% overflow-visible'
+    alt='cover art'/>
+  </a>
 
 {% endmacro%}

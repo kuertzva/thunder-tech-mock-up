@@ -1,13 +1,21 @@
+{#
+  Contains the featured article components
+#}
+
+{# Extend the Default Layout #}
 {% extends "layouts/components.njk" %}
 
+{# Import components #}
 {% from "components/feature.njk" import feature %}
 
 {% macro featureBox(layout, features=[]) %}
   <!-- featured articles -->
   <div
-  class='absolute z-200'
-  style='width:{{ layout.width }}; {{ layout.hort }}:{{ layout.x }};
-  {{ layout.vert}}:{{ layout.y }};'/>
+  class='absolute z-200 left-slide'
+  style='width:{{ layout.width }};
+  {{ layout.hort }}:{{ layout.x }};
+  {{ layout.vert}}:{{ layout.y }};'
+  id='featureBox'/>
     {% for f in features %}
       {{ feature(f, layout.feature) }}
     {% endfor %}

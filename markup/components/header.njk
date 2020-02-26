@@ -1,0 +1,43 @@
+{#
+ This is a reusable component to include the magazine's name. Since
+ this isn't something that would normally change (and could easily
+ cause font size issues if it were), I'm leaving that aspect static.
+
+ Links back to page.njk
+#}
+
+{# Extend the Default Layout #}
+{% extends "layouts/components.njk" %}
+
+{# Import components #}
+{% from "components/subheader.njk" import subheader %}
+
+{% macro header( sub, layout ) %}
+  <a
+  class='absolute inline-block z-200'
+  style='{{layout.vert}}: {{ layout.y }};
+  {{layout.hort}}:{{ layout.x }};'
+  href='./page.html'
+  id='header'>
+    <!-- Title -->
+    <h1
+    class='right-slide'
+    role='banner'>
+      <span
+      class='inline-block text-white font-header-sans'
+      style='font-size:{{ layout.fontSize.line1 }};
+      line-height:{{ layout.lineHeight.line1 }};'>
+
+        marketing
+      </span><br/>
+      <span
+      class='uppercase text-LadyOrange font-cap-header text-right'
+      style='font-size:{{ layout.fontSize.line2 }};
+      line-height:{{ layout.lineHeight.line2 }};'>
+        trends
+      </span><br/>
+    </h1>
+    {{ subheader( sub, layout.subheader)}}
+  </a>
+
+{% endmacro %}

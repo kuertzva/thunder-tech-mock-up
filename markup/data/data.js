@@ -1,19 +1,17 @@
-const content = require('./modules/content')
-const classLists = require('./modules/classlists')
-const subheader = require('./modules/subheader.js')
-const articles = require('./modules/articles.js')
-const layout = require('./modules/layout.js')
-const pg10 = require('./modules/pg10.js')
-const pg15 = require('./modules/pg15.js')
+const dataClassLists = require('./modules/classlists')
+const dataSubheader = require('./modules/subheader.js')
+const dataArticles = require('./modules/articles.js')
+const dataLayout = require('./modules/layout.js')
+const dataPg10 = require('./modules/pg10.js')
+const dataPg15 = require('./modules/pg15.js')
 
 const data = {
-  content,
-  classLists,
-  subheader,
-  articles,
-  layout,
-  pg10,
-  pg15,
+  dataClassLists,
+  dataSubheader,
+  dataArticles,
+  dataLayout,
+  dataPg10,
+  dataPg15,
 }
 
 module.exports = data

@@ -1,40 +1,48 @@
+{#
+  Adds in featured articles.
+#}
+
+{# Extend the Default Layout #}
 {% extends "layouts/components.njk" %}
 
 {% macro feature(article, layout) %}
   <!-- Top level container -->
-  <h3
-  class='text-white text-right left-slide'
-  style='margin-bottom: {{ layout.buffer }};'
-  role='article'>
+    <a
+    class=''
+    role='article'
+    href='{{article.src}}'>
+      <h3
+      class='text-white text-right'
+      style='margin-bottom: {{ layout.buffer }};'>
+        <!--Headline -->
+        <span
+        class='uppercase text-{{ article.color }} font-cap-header'
+        style='font-size:{{ layout.fontSize.line1 }};
+        line-height: {{ layout.lineHeight.line1 }};'>
+          {{article.title}}
+        </span>
 
-    <!--Headline -->
-    <span
-    class='uppercase text-{{ article.color }} font-cap-header'
-    style='font-size:{{ layout.fontSize.line1 }};
-    line-height: {{ layout.lineHeight.line1 }};'>
-      {{article.title}}
-    </span>
-
-    <!-- tagline -->
-    <span
-    class='font-content-serif whitespace-pre-line'
-    style='font-size:{{ layout.fontSize.line2 }};
-    line-height: {{ layout.lineHeight.line2 }};'>
-      {{article.tagLine}}
-    </span>
-    <!-- page in magazine -->
-    <span
-     class='font-header-sans display '
-     style='font-size:{{ layout.fontSize.line3 }};
-    line-height: {{ layout.lineHeight.line3 }};'>
-      <span
-      class='align-top'
-      style='font-size:{{ layout.fontSize.line4 }};
-      line-height: {{ layout.lineHeight.line4 }};'>
-        pg.
-      </span>
-        {{article.page}}
-      </span>
-  </h3>
+        <!-- tagline -->
+        <span
+        class='font-content-serif whitespace-pre-line'
+        style='font-size:{{ layout.fontSize.line2 }};
+        line-height: {{ layout.lineHeight.line2 }};'>
+          {{article.tagLine}}
+        </span>
+        <!-- page in magazine -->
+        <span
+        class='font-header-sans display '
+        style='font-size:{{ layout.fontSize.line3 }};
+        line-height: {{ layout.lineHeight.line3 }};'>
+          <span
+          class='align-top'
+          style='font-size:{{ layout.fontSize.line4 }};
+          line-height: {{ layout.lineHeight.line4 }};'>
+            pg.
+          </span>
+            {{article.page}}
+          </span>
+      </h3>
+    </a>
 
 {% endmacro %}

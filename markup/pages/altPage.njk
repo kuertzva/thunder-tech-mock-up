@@ -1,0 +1,27 @@
+{#
+  Homepage for content.
+#}
+
+
+{# Extend the Default Layout #}
+{% extends "layouts/altLayout.njk" %}
+
+{# Import components #}
+{% from "components/lady.njk" import lady %}
+{% from "components/featureBox.njk" import featureBox%}
+
+
+{# Set Page Title #}
+{% set title = 'MT::V11' %}
+
+{# Add to head of page #}
+{% block head %}
+{% endblock %}
+
+{# Actual Page Content #}
+{% block body %}
+
+  {{ lady( dataLayout.lady ) }}
+  {{ featureBox( dataLayout.featureBox, dataArticles ) }}
+
+{% endblock %}

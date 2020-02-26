@@ -1,13 +1,25 @@
+{#
+Text for article. Used the 'safe specifier to allow a string with
+html to be passed.
+
+I recognize this was possibly not the best practice, but because
+there is not a risky situation and I just wanted to add quick dummy
+text, I felt it appropriate to make an exception.
+
+style='{{layout.hort}}:{{layout.x}};
+{layout.vert}}:{{layout.textY}};'
+#}
+
+{# Extend the Default Layout #}
 {% extends "layouts/components.njk" %}
 
-
-{% macro articleText( article, layout ) %}
+{% macro articleText( article) %}
   <!-- Article Text -->
-  <p
-  class='absolute z-500 text-white whitespace-pre
-  font-content-serif text-2em pl-3em'
-  style='{{layout.hort}}:{{layout.x}};{{layout.vert}}:{{layout.textY}};'>
-    {{article.content}}
-  </p>
+  <div
+  class='text-white w-100% overflow-y-scroll h-80%
+  font-content-serif text-2em pl-5em'
+  >
+    {{article.content | safe}}
+  </div>
 
 {% endmacro %}

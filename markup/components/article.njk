@@ -1,0 +1,19 @@
+{# Container for article components#}
+
+{# Extend the Default Layout #}
+{% extends "layouts/components.njk" %}
+
+{# Import components #}
+{% from "components/articleTitle.njk" import articleTitle %}
+{% from "components/articleText.njk" import articleText %}
+
+{% macro article(art, layout) %}
+  <!-- ARTICLE -->
+  <div
+  class='absolute inline-block z-500 w-80% h-60% '
+  style='{{layout.hort}}:{{layout.x}};
+  {{layout.vert}}:{{layout.titleY}};'>
+    {{ articleTitle( art ) }}
+    {{ articleText( art ) }}
+  </div>
+{% endmacro %}

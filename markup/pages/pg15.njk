@@ -1,0 +1,26 @@
+{#
+ Because I'm making a magazine cover, I though it would make sense to have some
+ dummy articles for the featured articles on the cover to lead to.
+
+ That being said, I'm not going to crazy with these. If I were taking them seriously,
+ I would have a separate, smaller header. Also, nav bar.
+
+#}
+
+{# Extend the Default Layout #}
+{% extends "layouts/default.njk" %}
+
+{# Import components #}
+{% from "components/article.njk" import article %}
+
+{# Set Page Title #}
+{% set title = 'MT::V11' %}
+
+{# Add to head of page #}
+{% block head %}
+{% endblock %}
+
+{# Actual Page Content #}
+{% block body %}
+{{ article( dataPg15, dataLayout.article)}}
+{% endblock %}

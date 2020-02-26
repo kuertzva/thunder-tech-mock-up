@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"
+class=''>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="icon" type="image/png" href="./images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./images/favicon-16x16.png" sizes="16x16" />
+    {% block head %}
+    {% endblock %}
+  </head>
+
+  {#
+  Using a naming scheme of all imported data modules being prefixed
+  by data so that I can reuse names and create confusion.
+
+  Most positioning is done through relative and absolute positioning
+  due to grids being disabled the precision required of the
+  assignment. The exact positions of the elements is store and
+  transfered using the layout.js module (dataLayout). Comments inside
+  layout will layout it's logic
+
+  I determined not to use classlists.js. I don't think it cleanly
+  fits with the current archetecture and don't see a point in
+  shoehorning it in, though it would have been useful if I had
+  realized it's usefulness from the start.
+  #}
+
+
+
+  <body class="bg-BackdropGray">
+    <div
+    class="min-h-100vh overflow-hidden mx-auto max-w-1920"
+    data-hook="overflow"
+    role="presentation">
+      <main
+      class="container relative min-h-100vh w-100% text-1vw"
+      id="primary-container">
+        {# add in background and header elements#}
+        {% from "components/header.njk" import header %}
+        {% from "components/logo.njk" import logo %}
+        {% from "components/burst.njk" import burst %}
+        {{ header( dataSubheader, dataLayout.header ) }}
+        {{ logo( dataLayout.logo ) }}
+        <!-- backgroud -->
+        {{ burst( dataLayout.burst1 )}}
+        {{ burst( dataLayout.burst2 ) }}
+        {% block body %}
+        {% endblock %}
+      </main>
+      <script src="./main.js"></script>
+    </div>
+  </body>
+
+</html>

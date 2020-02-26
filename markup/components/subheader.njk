@@ -1,0 +1,15 @@
+{# resuable component to display subheader and volume number #}
+
+{# Extend the Default Layout #}
+{% extends "layouts/components.njk" %}
+
+{% macro subheader( sub, layout ) %}
+
+  <!-- Subtitle -->
+  <h2
+  class='font-content-serif text-white text-right left-slide'
+  style='font-size:{{ layout.fontSize }};'>
+    {{ sub.tagLine }} | volume {{ sub.volume }}
+  </h2>
+
+{% endmacro %}
