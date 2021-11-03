@@ -39,7 +39,7 @@
     "postcss-nested": "^4.1.2",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.0.2",
-    "validator": "^11.0.0",
+    "validator": "^13.7.0",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
     "yargs": "^13.3.0",
